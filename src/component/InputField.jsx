@@ -1,6 +1,6 @@
 import React from "react";
 import "./InputField.css";
-import ValuePrint from "./ValuePrint";
+
 
 const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields }) => {
   const { fieldName, fieldType, fieldLen } = field;
@@ -58,11 +58,7 @@ const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields 
             onClick={handleRemoveButtonClick}
           >
             Remove
-          </button>
-        
-      </div>
-      <div>
-        <ValuePrint/>
+          </button>   
       </div>
     </div>
   );

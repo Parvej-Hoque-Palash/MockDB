@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const ValuePrint = () => {
+const ValuePrint = ({ fields }) => {
   return (
-    <div>ValuePrint</div>
-  )
-}
+    <div>
+      {fields.map((field) => (
+        <div>
+          <p>{field.fieldName}</p>
+          <p>{field.fieldType}</p>
+          <p>{field.fieldLen}</p>
+        </div>
+      ))}
+    </div>
+  );
+};
 
-export default ValuePrint
+export default ValuePrint;

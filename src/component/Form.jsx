@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import InputField from "./InputField";
+import ValuePrint from "./ValuePrint";
 
 const Form = () => {
   const [fields, setFields] = useState([]);
@@ -46,7 +47,9 @@ const Form = () => {
           <button type="submit" className="btn btn-primary">Submit</button>
         </div>
       </form>
-      
+      <div>
+        <ValuePrint fields={fields}/>
+      </div>
     </div>
   );
 };
