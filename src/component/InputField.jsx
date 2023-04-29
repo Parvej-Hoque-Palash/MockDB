@@ -1,11 +1,16 @@
 import React from "react";
 import "./InputField.css";
 
-
-const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields }) => {
+const InputField = ({
+  index,
+  field,
+  handleFieldChange,
+  handleRemoveField,
+  fields,
+}) => {
   const { fieldName, fieldType, fieldLen } = field;
-  console.log('field',field);
-  console.log('fields',fields);
+  console.log("field", field);
+  console.log("fields", fields);
   const handleInputChange = (event) => {
     handleFieldChange(index, event);
   };
@@ -15,7 +20,7 @@ const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields 
   };
 
   return (
-    <div style={{ width: "50%" }} className="ml-5 mb-4">
+    <div style={{ width: "80%" }} className="ml-5 mb-4 mr-5">
       <div className="row">
         <div className="col">
           <label>Name</label>
@@ -25,7 +30,7 @@ const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields 
             placeholder="Field Name"
             value={fieldName}
             onChange={handleInputChange}
-            className="form-control"
+            className="form-control h-auto w-400 d-inline-block"
           />
         </div>
         <div className="col">
@@ -36,7 +41,7 @@ const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields 
             placeholder="Field Type"
             value={fieldType}
             onChange={handleInputChange}
-            className="form-control"
+            className="form-control h-auto w-300 d-inline-block"
           />
         </div>
         <div className="col">
@@ -47,18 +52,17 @@ const InputField = ({ index, field, handleFieldChange, handleRemoveField,fields 
             placeholder="Field Length"
             value={fieldLen}
             onChange={handleInputChange}
-            className="form-control"
+            className="form-control h-auto w-100 d-inline-block"
           />
         </div>
         
-          <button 
-            type="button"
-            
-            className="btn btn-danger mt-0"
-            onClick={handleRemoveButtonClick}
-          >
-            Remove
-          </button>   
+        <button
+          type="button"
+          className="btn btn-danger mt-auto h-50 w-25"
+          onClick={handleRemoveButtonClick}
+        >
+          Remove
+        </button>
       </div>
     </div>
   );
